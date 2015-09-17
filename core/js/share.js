@@ -532,12 +532,14 @@ OC.Share={
 				var itemType = $dropDown.data('item-type');
 				var itemSource = $dropDown.data('item-source');
 				var itemSourceName = $dropDown.data('item-source-name');
-				var expirationDate = '';
-				if ( $('#expirationCheckbox').is(':checked') === true ) {
-					expirationDate = $( "#expirationDate" ).val();
-				}
 				var shareType = selected.item.value.shareType;
 				var shareWith = selected.item.value.shareWith;
+				var expirationDate = '';
+				if (shareType !== OC.Share.SHARE_TYPE_USER && shareType !== OC.Share.SHARE_TYPE_GROUP) {
+					if ( $('#expirationCheckbox').is(':checked') === true ) {
+						expirationDate = $( "#expirationDate" ).val();
+					}
+				}
 				$(this).val(shareWith);
 				// Default permissions are Edit (CRUD) and Share
 				// Check if these permissions are possible
