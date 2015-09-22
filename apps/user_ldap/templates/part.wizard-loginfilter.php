@@ -4,22 +4,22 @@
 			<?php p($l->t('When logging in, %s will find the user based on the following attributes:', $theme->getName()));?>
 		</p>
 		<p>
-			<label for="ldap_loginfilter_username">
-				<?php p($l->t('LDAP / AD Username:'));?>
-			</label>
-
 			<input type="checkbox" id="ldap_loginfilter_username"
 				   title="<?php p($l->t('Allows login against the LDAP / AD username, which is either uid or samaccountname and will be detected.'));?>"
 				   name="ldap_loginfilter_username" value="1" />
+
+			<label for="ldap_loginfilter_username">
+				<?php p($l->t('LDAP / AD Username'));?>
+			</label>
 		</p>
 		<p>
-			<label for="ldap_loginfilter_email">
-				<?php p($l->t('LDAP / AD Email Address:'));?>
-			</label>
-
 			<input type="checkbox" id="ldap_loginfilter_email"
 				   title="<?php p($l->t('Allows login against an email attribute. Mail and mailPrimaryAddress will be allowed.'));?>"
 				   name="ldap_loginfilter_email" value="1" />
+
+			<label for="ldap_loginfilter_email">
+				<?php p($l->t('LDAP / AD Email Address'));?>
+			</label>
 		</p>
 		<p>
 			<label for="ldap_loginfilter_attributes">
