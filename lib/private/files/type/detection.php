@@ -260,7 +260,7 @@ class Detection implements IMimeTypeDetector {
 	public function mimeTypeIcon($mimetype) {
 		$this->loadAliases();
 
-		if (isset($this->mimeTypeAlias[$mimetype])) {
+		while (isset($this->mimeTypeAlias[$mimetype])) {
 			$mimetype = $this->mimeTypeAlias[$mimetype];
 		}
 		if (isset($this->mimetypeIcons[$mimetype])) {
